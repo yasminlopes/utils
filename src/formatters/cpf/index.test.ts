@@ -63,4 +63,7 @@ describe('formatCpf', () => {
     expect(formatCpf('94389575104000000')).toBe('943.895.751-04');
   });
 
+  it('should remove all non numeric characters', () => {
+    expect(formatCpf('943.?ABC895.751-04abc')).toBe('943.895.751-04');
+  });
 });
