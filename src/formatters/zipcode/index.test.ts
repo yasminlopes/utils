@@ -17,4 +17,7 @@ describe('formatZipCode', () => {
     expect(formatZipCode('01001000000000')).toBe('01001-000');
   });
 
+  it('should remove all non numeric characters', () => {
+    expect(formatZipCode('a0.10cr01?00#ab0')).toBe('01001-000');
+  });
 });
