@@ -3,3 +3,4 @@ export * from './br-date';
 export * from './list';
 export * from './rg';
 export * from './cpf';
+export * from './zipcode';
