@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "*": ["*"],
+    },
+    "outDir": "dist",
+    "module": "commonjs",
+    "target": "es2019",
+    "esModuleInterop": true,
+    // "strictNullChecks": true,
+    "strictPropertyInitialization": false,
+    "strict": false,
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": ["**/*.spec.ts", "**/*.test.ts"]
+}
