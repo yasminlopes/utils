@@ -13,5 +13,8 @@ describe('formatZipCode', () => {
     expect(formatZipCode('01001000')).toBe('01001-000');
   });
 
+  it(`should NOT add digits after the CEP length (${CEP_LENGTH})`, () => {
+    expect(formatZipCode('01001000000000')).toBe('01001-000');
+  });
 
 });
