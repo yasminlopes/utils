@@ -25,4 +25,12 @@ describe('validateZipCode', () => {
         expect(validateZipCode(false as any)).toBe(false);
       });
     });
+    describe('should return true', () => {
+      it('when is a cep valid without mask', () => {
+        expect(validateZipCode('92500000')).toBe(true);
+      });
+      it('when is a cep valid with mask', () => {
+        expect(validateZipCode('92500-000')).toBe(true);
+      });
+    });
   });
