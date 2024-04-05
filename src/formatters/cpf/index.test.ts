@@ -59,4 +59,8 @@ describe('formatCpf', () => {
     expect(formatCpf(94389575104, { pad: true })).toBe('943.895.751-04');
   });
 
+  it(`should NOT add digits after the CPF length (${LENGTH})`, () => {
+    expect(formatCpf('94389575104000000')).toBe('943.895.751-04');
+  });
+
 });
