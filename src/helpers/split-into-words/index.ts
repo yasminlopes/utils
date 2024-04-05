@@ -1,10 +1,12 @@
+import { RegExHelper } from 'helpers';
+
 /**
  * Divide um texto em palavras, considerando espaços em branco como delimitadores.
  * 
  * @param text O texto a ser dividido em palavras.
  * @returns Um array contendo as palavras resultantes da divisão do texto.
  */
-const splitIntoWords = (text: string): string[] => text ? text.split(/\s+/) : [];
+const splitIntoWords = (text: string): string[] => text ? text.split(RegExHelper.matchAllSpaces) : [];
 
 export default splitIntoWords;
 
